@@ -9,9 +9,9 @@ import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 
-function SidebarRow({ Icon, title} ) {
+function SidebarRow({ selected, Icon, title} ) {
   return (
-    <div className="sidebarRow">
+    <div className={`sidebarRow ${selected && "selected"}`}>
       <Icon className="sidebarRow__icon"/>
       <h2 className="sidebarRow__title">{title}</h2> 
              
