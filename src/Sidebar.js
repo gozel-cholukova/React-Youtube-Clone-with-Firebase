@@ -13,15 +13,16 @@ import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 function Sidebar() {
   return (
     <div className="sidebar">
-      <SidebarRow Icon={HomeIcon} title="Home" />
+      <SidebarRow selected Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={WhatshotIcon} title="Trending" />
       <SidebarRow Icon={SubscriptionsIcon} title="Subscription" />
-      {/* <SidebarRow icon={VideoLibraryIcon} title="Library" />
-      <SidebarRow icon={HistoryIcon} title="History" />
-      <SidebarRow icon={OndemandVideoIcon} title="Your Videos" />
-      <SidebarRow icon={WatchLaterIcon} title="Watch Later" />
-      <SidebarRow icon={ThumbUpIcon} title="Liked videos" /> */}
-
+      <hr />
+      <SidebarRow Icon={VideoLibraryIcon} title="Library" />
+      <SidebarRow Icon={HistoryIcon} title="History" />
+      <SidebarRow Icon={OndemandVideoIcon} title="Your Videos" />
+      <SidebarRow Icon={WatchLaterIcon} title="Watch Later" />
+      <SidebarRow Icon={ThumbUpIcon} title="Liked videos" />
+      <hr />
     </div>
   )
 }
