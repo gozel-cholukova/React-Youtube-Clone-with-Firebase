@@ -1,0 +1,31 @@
+.searchPage {
+  flex: 0.8;
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+}
+
+.searchPage__filter {
+  display: flex;
+  align-items: center;
+  color: #606060;
+  font-size: xx-small !important;
+  border-bottom: 1px solid lightgray;
+}
+
+.searchPage__filter > h2 {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.searchPage__filter > .tune {
+  margin-bottom: 10px;
+}
+
+/* sonny did this 
+.searchPage > hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} */
