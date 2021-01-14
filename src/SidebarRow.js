@@ -1,22 +1,16 @@
-import React from 'react';
+import React from "react";
 import "./SidebarRow.css";
-import HomeIcon from '@material-ui/icons/Home';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
-import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
-import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
-import HistoryIcon from '@material-ui/icons/History';
-import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
-import WatchLaterIcon from '@material-ui/icons/WatchLater';
-import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import { Avatar } from "@material-ui/core";
 
-function SidebarRow({ selected, Icon, title} ) {
+function SidebarRow({ src, Icon, title }) {
   return (
-    <div className={`sidebarRow ${selected && "selected"}`}>
-      <Icon className="sidebarRow__icon"/>
-      <h2 className="sidebarRow__title">{title}</h2> 
-             
+    <div className="sidebarRow">
+      {src && <Avatar src={src} />}
+      {Icon && <Icon />}
+      
+      <h4>{title}</h4>
     </div>
-  );
-}
 
-export default SidebarRow;
+  )
+}
+ export default SidebarRow;

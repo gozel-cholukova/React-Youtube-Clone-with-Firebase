@@ -1,28 +1,28 @@
 import React from 'react';
 import "./Sidebar.css";
 import SidebarRow from "./SidebarRow";
-import HomeIcon from '@material-ui/icons/Home';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
-import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
-import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
-import HistoryIcon from '@material-ui/icons/History';
-import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
-import WatchLaterIcon from '@material-ui/icons/WatchLater';
-import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
+import EmojiFlagsIcon from "@material-ui/icons/EmojiFlags";
+import PeopleIcon from "@material-ui/icons/People";
+import ChatIcon from "@material-ui/icons/Chat";
+import StorefrontIcon from "@material-ui/icons/Storefront";
+import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
+import { ExpandMoreOutlined } from "@material-ui/icons";
+import { useStateValue } from "./StateProvider";
 
 function Sidebar() {
+  const [{ user } , dispatch] = useStateValue();
+  
   return (
     <div className="sidebar">
-      <SidebarRow selected Icon={HomeIcon} title="Home" />
-      <SidebarRow Icon={WhatshotIcon} title="Trending" />
-      <SidebarRow Icon={SubscriptionsIcon} title="Subscription" />
-      <hr />
-      <SidebarRow Icon={VideoLibraryIcon} title="Library" />
-      <SidebarRow Icon={HistoryIcon} title="History" />
-      <SidebarRow Icon={OndemandVideoIcon} title="Your Videos" />
-      <SidebarRow Icon={WatchLaterIcon} title="Watch Later" />
-      <SidebarRow Icon={ThumbUpIcon} title="Liked videos" />
-      <hr />
+      <SidebarRow src={user.photoURL} title={user.displayName} />
+      <SidebarRow Icon={LocalHospitalIcon} title="COVID-19 Information Center"/>
+      <SidebarRow Icon={EmojiFlagsIcon} title="Pages"/>
+      <SidebarRow Icon={PeopleIcon} title="Friends"/>
+      <SidebarRow Icon={ChatIcon} title="Messenger" />
+      <SidebarRow Icon={StorefrontIcon} title="Marketplace"/>
+      <SidebarRow Icon={VideoLibraryIcon} title="Videos"/>
+      <SidebarRow Icon={ExpandMoreOutlined} title="See More"/>
     </div>
   )
 }
